@@ -1,8 +1,8 @@
 /*
 * All rights reserved by Winston Chan
-* Created in 2018
+* Copyright 2018 by Winston Chan
 *
-* The similar lazy loading library is referenced from https://github.com/vishnurs/lazy
+* The lazy loading library is referenced from https://github.com/vishnurs/lazy
 */
 class LoadApp{
     constructor(){
