@@ -9,15 +9,11 @@ header{
     top: 0;
     width: 100%;
 }
-#menu {
-    height: 3em;
-}
 #logo {
     position:absolute;
     left:0; right:0;
     top:0; bottom:0;
     margin: auto;
-    height: 3em;
 }
 h2 {
     color: #cc9933;
@@ -60,6 +56,9 @@ h2, h3 {
         margin-left: 10%;
         margin-right: 10%;
     }
+    #menu, #logo {
+        height: 3em;
+    }
     .img{
         float: left;
         margin-right: 50px;
@@ -76,6 +75,9 @@ h2, h3 {
     main {
         margin-left: 5%;
         margin-right: 5%;
+    }
+    #menu, #logo {
+        height: 2.5em;
     }
     .img{
         width: 100%;
