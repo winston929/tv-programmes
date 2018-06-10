@@ -1,12 +1,9 @@
 /*
-* All rights reserved by Winston Chan
 * Copyright 2018 by Winston Chan
-*
-* The lazy loading library is referenced from https://github.com/vishnurs/lazy
+* The lazy loading library is provided from https://github.com/vishnurs/lazy
 */
 class LoadApp{
     constructor(){
-        this.descriptionClass = [];
         this.loadLazyLoadLibrary();
         this.createShowMoreClasses();
     }
@@ -19,7 +16,7 @@ class LoadApp{
 
     createShowMoreClasses() {
         for(let i = 0; i < 6; i++){
-            this.descriptionClass[i] = new Description(i + 1);
+            new Description(i + 1);
         }
     }
 }
@@ -39,14 +36,14 @@ class Description{
             this.lessText = this.moreText.slice(0, this.showChar) + "...";
             this.element.innerText = this.lessText;
 
-            this.linkElem = document.createElement("a");
-            this.linkElem.className = "button";
-            this.linkElem.href = "#";
-            this.linkElem.innerText = this.showMore;
+            this.buttonElem = document.createElement("a");
+            this.buttonElem.className = "button";
+            this.buttonElem.href = "#";
+            this.buttonElem.innerText = this.showMore;
 
-            this.linkElem.onclick= this.onButtonClicked.bind(this);
+            this.buttonElem.onclick= this.onButtonClicked.bind(this);
 
-            document.getElementById("programme" + id.toString()).appendChild(this.linkElem);
+            document.getElementById("programme" + id.toString()).appendChild(this.buttonElem);
         }
     }
 
@@ -54,7 +51,7 @@ class Description{
         e.preventDefault();
         this.isLessText = !this.isLessText;
 
-        this.linkElem.innerText = (this.isLessText) ? this.showMore : this.showLess;
+        this.buttonElem.innerText = (this.isLessText) ? this.showMore : this.showLess;
         this.element.innerText = (this.isLessText) ? this.lessText : this.moreText;
     }
 }
